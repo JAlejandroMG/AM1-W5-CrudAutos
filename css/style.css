@@ -1,0 +1,119 @@
+body {
+  background: #000;
+  font-family: 'Yantramanav', sans-serif;
+  color: white;
+}
+img {
+  width: 100%;
+}
+
+
+ .contains-all {
+  height: 100vh;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, .75),
+      rgba(0, 0, 0, 1)
+    ),
+    url("../img/1carbg.jpg") center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: scroll;
+}
+header {
+  position: fixed;
+  width: 100%;
+  height: 13vh;
+  background: rgba(0, 0, 0, 1);
+  z-index: 1;
+}
+h1 {
+  font-weight: bold;
+  color:#004692;
+  text-shadow: 3px 3px 3px #007bff;
+}
+header p {
+  color: #007bff;
+  font-weight: bold;
+}
+.form-cards {
+  width: 85%;
+}
+label {
+  font-size: .9rem;
+  font-weight: bold;
+  color: #007bff;
+}
+input, .input-group-text {
+  opacity: 0.5;
+}
+h6 {
+  color: #007bff;
+  text-align: justify;
+}
+footer {
+  height: 10vh;
+}
+a {
+  margin-right: .3rem;
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+a:hover {
+  color:  #007bff;
+}
+
+
+/* Helpers */
+.w-85 {
+  width: 80%;
+}
+.pt-header {
+  padding-top: 10vh;
+}
+.bg-darker {
+  background: #1d1e1f;
+  opacity: .7;
+}
+
+
+/* Media query Extra Small */
+@media (max-width: 575px) {
+  .col-xs-6 {
+    width: calc(100%/12*6);
+  }
+  .col-xs-55 {
+    width: calc(100%/12*5.5);
+  }
+  .col-xs-1 {
+    width: calc(100%/12);
+  }
+}
+@media (min-width: 576px) {
+  .foot {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  header {
+    height: 14vh;
+  }
+  .pt-header {
+    padding-top: 12vh;
+  }
+  h6 {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .form-cards {
+    width: 70%;
+  }
+}
+@media (min-width: 1200px) {
+  .form-cards {
+    width: 50%;
+  }
+}

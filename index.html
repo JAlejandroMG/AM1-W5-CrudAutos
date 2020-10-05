@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Document</title>
+</head>
+
+
+<body>
+  <div class="contains-all">
+    <!-- Header starts here -->
+    <header class="pt-2">
+      <h1 class="text-center mb-0">Agencia de Autos</h1>
+      <p class="text-center mb-0">Variedad de Modelos</p>
+    </header>
+    <!-- Header ends here -->
+
+    <!-- Form starts here -->
+    <section class= "container form-cards pt-header">
+      <div class="card bg-transparent">
+        <div class="card-body">
+          <form id="cars-form" onsubmit="event.preventDefault(), submitButton()" action="/carsListData">
+            <div class="form-row">
+              <div class="form-group input-group-sm mb-0 col-md-6">
+                <label for="brand" class="col-form-label col-form-label-sm">Marca</label>
+                <input type="text" class="form-control" id="brand" placeholder="Ejemplo Volkswagen" required autofocus>
+              </div>
+              <div class="form-group input-group-sm mb-0 col-sm-6">
+                <label for="model" class="col-form-label col-form-label-sm">Modelo</label>
+                <input type="text" class="form-control" id="model" placeholder="Ejemplo Jetta Trendline" required>
+              </div>
+              <div class="form-group input-group-sm mb-0 col-sm-6 col-md-4">
+                <label for="color" class="col-form-label col-form-label-sm">Color</label>
+                <input type="text" class="form-control" id="color" placeholder="Ejemplo Azul seda" required>
+              </div>
+              <div class="form-group input-group-sm mb-0 col-xs-6 col-sm-6 col-md-4">
+                <label for="year" class="col-form-label col-form-label-sm">Año</label>
+                <input type="number" class="form-control" id="year" placeholder="2020" required>
+              </div>
+              <div class="form-group input-group-sm mb-1 col-xs-6 col-sm-6 col-md-4">
+                <label for="price" class="col-form-label col-form-label-sm">Precio</label>
+                <input type="number" class="form-control text-right" id="price" placeholder="319990" required>
+              </div>
+              <button type="submit" id="submit-button" class="btn btn-primary btn-sm mt-2 form-group col-xs-55 col-sm-4 col-md-3">Agregar modelo</button>
+              <span class="col-xs-1 col-sm-4 col-md-6"></span>
+              <button class="btn-localdb btn btn-danger btn-sm mt-2 form-group col-xs-55 col-sm-4 col-md-3" hidden ></button>
+            </div>
+          </form>
+        </div>
+      </div>    
+    </section>
+    <!-- Form ends here -->
+
+    <!-- Content starts here -->
+    <div class="container w-85 mt-3">
+      <h6 class="mb-3">Para eliminar un modelo haga click en la parte superior de la tarjeta. Para editarlo haga  click en la parte inferior.</h6>
+
+      <div class="row" id="cars-list">
+        <!--
+        <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
+          <div class="card bg-darker text-center">
+            <h5 onclick="deleteCar(${car.id})" class="card-header">Marca</h5>
+            <div onclick="editCarInfo(${car.id})" class="card-body bg-dark pt-2 pb-2">
+              <h5 class="card-title mb-0">Modelo</h5>
+              <p class="card-text mb-0">Color</p>
+              <p class="card-text mb-0">Año</p>
+              <p class="card-text mb-0">Precio</p>
+            </div>
+          </div>
+        </div>
+        -->
+      </div>
+    </div>
+    <!-- Content ends here -->
+
+    <!-- Footer starts here -->
+    <footer class= "container foot d-flex justify-content-between align-items-center">
+      <div class="social-icons">
+        <a href="https://www.academlo.com/">
+          <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="https://www.academlo.com/">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://www.academlo.com/">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+      </div>
+      <div class="copy">&copy; Copyright 2020</div>
+    </footer>
+    <!-- Footer ends here -->
+  </div>
+
+  <script src="https://kit.fontawesome.com/318504dab6.js" crossorigin="anonymous"></script>
+  <script type="module" src="./js/printCarsList.js"></script>
+  <script type="module" src="./js/addCar.js"></script>
+  <script type="module" src="./js/editCar.js"></script>
+  <script type="module" src="./js/deleteCar.js"></script>
+</body>
+</html>
