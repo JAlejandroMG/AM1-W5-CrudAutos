@@ -34,21 +34,32 @@ import carsListData from './carsListData.js';
 7- let newCar
 */
 
+
+
 const addCar = () => {
   const brand = document.getElementById('brand').value;
   const model = document.getElementById('model').value;
   const color = document.getElementById('color').value;
   const year = document.getElementById('year').value;
   const price = document.getElementById('price').value;
-  const id = carsListData.length + 1;
-
-  let newCar = {'id': id , 'brand': brand, 'model': model, 'color': color, 'year': year, 'price': price};
+  
+  let newId = 0;
+  if(carsListData.length) {
+    const lastId = carsListData[(carsListData.length)-1].id;
+    newId = lastId + 1;
+    alert(newId);
+  } else {
+    newId = 1;
+    alert(newId);
+  }
+  
+  let newCar = {'id': newId , 'brand': brand, 'model': model, 'color': color, 'year': year, 'price': price};
   
   carsListData.push(newCar);
-  
+
   document.getElementById('cars-form').reset();
   document.getElementById("brand").focus();
-
+  
   printCarsList();
 }
 
