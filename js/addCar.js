@@ -47,10 +47,8 @@ const addCar = () => {
   if(carsListData.length) {
     const lastId = carsListData[(carsListData.length)-1].id;
     newId = lastId + 1;
-    alert(newId);
   } else {
     newId = 1;
-    alert(newId);
   }
   
   let newCar = {'id': newId , 'brand': brand, 'model': model, 'color': color, 'year': year, 'price': price};
